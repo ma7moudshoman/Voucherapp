@@ -13,7 +13,7 @@ public class VoucherController {
     @Autowired
     VoucherRepo voucherRepo;
 
-    @PostMapping("/voucher")
+    @PostMapping("/vouchers")
 public Voucher creat(@RequestBody Voucher voucher){
     return voucherRepo.save(voucher);
 }
