@@ -4,9 +4,11 @@ package com.voucher.voucherapp.Controller;
 import com.voucher.voucherapp.Repository.VoucherRepo;
 import com.voucher.voucherapp.model.Voucher;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
+//  GET http://localhost:3030//voucherApi
 @RequestMapping("/voucherApi")
 public class VoucherController {
 
@@ -22,5 +24,10 @@ public Voucher creat(@RequestBody Voucher voucher){
 public Voucher getvoucher(@PathVariable ("code") String code){
         return voucherRepo.findByCode(code);
 }
+
+
+
+
+
 
 }
