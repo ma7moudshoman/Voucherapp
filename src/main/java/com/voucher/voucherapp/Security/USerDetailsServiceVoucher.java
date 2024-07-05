@@ -31,6 +31,6 @@ public class USerDetailsServiceVoucher implements UserDetailsService {
         new UsernameNotFoundException("User Not Found " + username);
     } return new org.springframework.security.core.userdetails.User(user.getEmail(),
                 user.getPassword(), user.getRoles().stream()
-                .map(role -> new SimpleGrantedAuthority(role.getRoleName()))
+                .map(role -> new SimpleGrantedAuthority(role.toString()))
                 .collect(Collectors.toList()));}
 }
